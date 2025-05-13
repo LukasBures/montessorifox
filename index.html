@@ -1,71 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Basic Info -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Content-Language" content="en">
-    <meta name="robots" content="index, follow">
-
-    <!-- Title & Description -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Montessori Fox – respectful parenting, printables, and inspiration for families following the Montessori approach." />
+    <meta name="robots" content="index, follow" />
     <title>Montessori Fox</title>
-    <meta name="description" content="Montessori Fox – respectful parenting, printable materials, and inspiration for parents following the Montessori method.">
-
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Montessori Fox">
-    <meta property="og:description" content="Respectful parenting, printable resources, and Montessori inspiration for children aged 2–6.">
-    <meta property="og:image" content="page.png">
-    <meta property="og:url" content="https://montessorifox.com">
-
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Montessori Fox">
-    <meta name="twitter:description" content="Respectful parenting, printable resources, and Montessori inspiration for children aged 2–6.">
-    <meta name="twitter:image" content="page.png">
-
-    <!-- PWA & Theming -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="/assets/img/icon.png" type="image/png" />
+    <meta property="og:title" content="Montessori Fox" />
+    <meta property="og:description" content="Respectful parenting, printable materials, and Montessori inspiration." />
+    <meta property="og:image" content="page-preview.jpg" />
+    <meta property="og:url" content="https://montessorifox.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#ffffff" />
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        html, body {
+        * { box-sizing: border-box; }
+        body {
             margin: 0;
-            padding: 0;
-            background-color: #ffffff;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #fff5e9;
+            color: #333;
         }
 
-        .container {
+        a { text-decoration: none; }
+
+        .section {
             width: 100%;
-            height: 100%;
+            text-align: center;
         }
 
-        img {
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #fef6f2;
+        }
+
+        .hero-left {
+            flex: 1 1 50%;
+        }
+
+        .hero-left img {
             width: 100%;
             height: auto;
             display: block;
         }
+
+        .hero-right {
+            flex: 1 1 50%;
+            padding: 4rem 2rem;
+            background-color: #fef6f2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-right h1 {
+            color: #d54274;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .hero-right p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            max-width: 300px;
+        }
+
+        .button {
+            background-color: #ed4d7a;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #d35400;
+            margin-top: 2rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .icon-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .icon-links .card {
+            width: 33.33%;
+            position: relative;
+            overflow: hidden;
+            height: 400px;
+        }
+
+        .icon-links .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .icon-links .card:nth-child(3) img {
+            object-position: center;
+            transform: scale(1.2);
+        }
+
+        .icon-links .card .button-overlay {
+            position: absolute;
+            bottom: 40%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ed4d7a;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 20px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #f5e0f1;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .about img {
+            max-width: 300px;
+            border-radius: 12px;
+            margin: 1rem;
+        }
+
+        .about-text {
+            max-width: 500px;
+            padding: 1rem;
+        }
+
+        .about-text h2 {
+            color: #c54a7e;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .social {
+            background-color: #ffe1bb;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .social h2 {
+            font-size: 2rem;
+            color: #d35400;
+            text-align: center;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .social-icons img {
+            height: 40px;
+        }
+
+        footer {
+            background-color: #ffe1bb;
+            text-align: center;
+            padding-bottom: 2rem;
+        }
+
+        footer img {
+            height: 40px;
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
-
 <body>
-<div class="container">
-    <img src="page.png" alt="Montessori Fox – Respectful parenting and inspiration" loading="lazy">
-</div>
 
-<noscript>
-    <p style="text-align:center; color:#b00; font-size:1rem;">
-        This website requires JavaScript. Please enable JavaScript in your browser.
-    </p>
-</noscript>
+<header>
+    <div class="hero-left">
+        <img src="/assets/img/hero.png" alt="Mom reading to child">
+    </div>
+    <div class="hero-right">
+        <h1>Montessori at home,<br>with heart and respect</h1>
+        <p>Montessori approach, Positive Discipline, printables, and inspiration for parents who want to offer their children something more.</p>
+        <a href="#about" class="button">START HERE</a>
+    </div>
+</header>
+
+<section class="section">
+    <h2 class="section-title">Inspiration for You</h2>
+    <p class="subtitle">for homeschoolers and professionals</p>
+    <div class="icon-links">
+        <div class="card">
+            <img src="/assets/img/microfon_icon.png" alt="Microphone icon">
+            <a href="#" class="button-overlay">LISTEN TO MY PODCAST</a>
+        </div>
+        <div class="card">
+            <img src="/assets/img/apple_icon.png" alt="Apple icon">
+            <a href="#" class="button-overlay">EXPLORE MY SHOP</a>
+        </div>
+        <div class="card">
+            <img src="/assets/img/notebook_icon.png" alt="Notebook icon">
+            <a href="#" class="button-overlay">READ BLOG</a>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <img src="/assets/img/Kamila.png" alt="Kamila portrait">
+    <div class="about-text">
+        <h2>About Me</h2>
+        <p>Hello, I'm Kamila, an <strong>AMI Certified Montessori Guide (3–6)</strong> and <strong>Positive Discipline Certified Parent Educator</strong>. I am also a mom who homeschools her children with love, respect, and curiosity every day.</p>
+        <p>I believe that every child has an inner drive to learn and grow when given freedom within clear boundaries and a well-prepared environment. My mission is to support families in nurturing independence, responsibility, critical thinking, and life-long love for learning.</p>
+        <p><strong>I design printable materials</strong>, writing guides, and share practical tips that parents can easily use at home. All my creations are rooted in authentic Montessori principles and inspired by my own homeschooling journey.</p>
+    </div>
+</section>
+
+<section class="social">
+    <h2>Follow Me on Social Media</h2>
+    <div class="social-icons">
+        <a href="#"><img src="https://img.icons8.com/ios-filled/50/instagram-new.png" alt="Instagram"></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/50/facebook-new.png" alt="Facebook"></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/50/tiktok--v1.png" alt="TikTok"></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/50/youtube-play.png" alt="YouTube"></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/50/threads.png" alt="Threads"></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/50/linkedin.png" alt="LinkedIn"></a>
+    </div>
+</section>
+
+<footer>
+    <img src="https://img.icons8.com/ios-filled/50/new-post.png" alt="Email">
+    <div>
+        <a href="mailto:hello@montessorifox.com" class="button">CONTACT ME</a>
+    </div>
+</footer>
+
 </body>
 </html>
